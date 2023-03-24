@@ -1,19 +1,21 @@
 package com.example.demo.model;
 
+import org.springframework.data.annotation.Id;
+
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
-// @Entity is a JPA annotation that tells Spring that this class is an entity that should be persisted in the database.
+// @Entity is used to show it is a JPA entitiy. Instances of this class will be mapped to the database.
 // @Getter and @Setter are Lombok annotations that automatically generate getters and setters for the class.
 @Entity
 @Getter
 @Setter
 public class User {
 
-    // Properties of the user class:
-    private String username;
+    @Id //makes email the primary key
     private String email;
+    private String username;
 
     // constructor for the user class:
     public User(String username, String email) {
