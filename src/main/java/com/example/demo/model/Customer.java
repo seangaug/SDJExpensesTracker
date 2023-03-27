@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import org.springframework.data.annotation.Id;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,14 +12,17 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class User {
+public class Customer {
 
     @Id //makes email the primary key
+    @Column(name = "email") //defines an email column in the database
     private String email;
+
+    @Column(name = "username") //defines a username column in the database
     private String username;
 
     // constructor for the user class:
-    public User(String username, String email) {
+    public Customer(String username, String email) {
         this.username = username;
         this.email = email;
     }
