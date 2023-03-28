@@ -17,7 +17,5 @@ public interface Customer {
     Customer updateCustomer(Customer customer);
 
     // Delete operation
-    void deleteCustomer(Customer customer);
-
-    
+    void deleteCustomer(Customer customer);  
 }

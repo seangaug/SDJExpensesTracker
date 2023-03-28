@@ -14,7 +14,7 @@ public class CustomerImpl implements Customer {
     @Autowired // injects the CustomerRepository into the CustomerImpl class
     CustomerRepository customerRepository;
 
-    // save operation
+    // save/post operation
     public Customer saveCustomer(Customer customer) {
         return customerRepository.save(customer);
     }
@@ -45,6 +45,7 @@ public class CustomerImpl implements Customer {
         throw new UnsupportedOperationException("Unimplemented method 'deleteCustomer'");
     }
 
+    // read operation
     @Override
     public List<Customer> getCustomer() {
         List<Customer> customers = new ArrayList<>();

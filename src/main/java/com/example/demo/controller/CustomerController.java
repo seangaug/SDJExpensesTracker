@@ -17,7 +17,7 @@ public class CustomerController {
 
     // save operation
     @PostMapping("/customers")
-    public Customer saveCustomer(@RequestBody Customer customer) {
+    public Customer saveCustomer(@RequestBody Customer customer) { //Request body is the JSON object that is sent to the server
         return customer.saveCustomer(customer);
     }
     
@@ -26,5 +26,4 @@ public class CustomerController {
     public List<Customer> getCustomers() {
         return customer.getCustomer();
     }
-
 }

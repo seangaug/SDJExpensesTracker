@@ -25,4 +25,8 @@ public class Customer {
         this.username = username;
         this.email = email;
     }
+
+    // default constructor
+    public Customer(){
+    }
 }
