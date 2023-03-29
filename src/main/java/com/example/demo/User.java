@@ -1,9 +1,9 @@
 package com.example.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class User {
@@ -15,6 +15,24 @@ public class User {
     private String email;
 
     private String username;
+
+    //Linking to Expense
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<Expense> expenses = new ArrayList<>();
+
+//    public void addExpense(Expense expense) {
+//        expenses.add(expense);
+//        expense.setUser(this);
+//    }
+//
+//    public void removeExpense(Expense expense) {
+//        expenses.remove(expense);
+//        expense.setUser(null);
+//    }
+//
+//    public List<Expense> getExpenses() {
+//        return expenses;
+//    }
 
     public Long getId() {
         return id;

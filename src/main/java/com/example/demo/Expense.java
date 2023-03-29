@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Expense {
@@ -19,6 +16,19 @@ public class Expense {
     private String category;
 
     private String status;
+
+    //linking to User
+//    @ManyToOne
+//    @JoinColumn(name = "user_email", referencedColumnName = "email")
+//    private User user;
+//
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
     public Long getId() {
         return id;

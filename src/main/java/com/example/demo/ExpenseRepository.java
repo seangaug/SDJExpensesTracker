@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface ExpenseRepository extends CrudRepository<Expense, Long> {
     List<Expense> findByCategory(String category);
+    //List<Expense> findByUserEmail(String userEmail);
 }
 
